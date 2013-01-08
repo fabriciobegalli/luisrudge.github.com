@@ -2,6 +2,7 @@
 layout: post
 title: Blog post Test
 excerpt: 20
+location: Brazil
 tags:
 - test
 - wtf
