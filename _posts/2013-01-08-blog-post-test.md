@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blog post Test
-excerpt: 1
+excerpt: 20
 tags:
 - test
 - wtf
