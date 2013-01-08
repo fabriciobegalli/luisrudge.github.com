@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ page.title }} &#8211; luisrudge.net</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37408911-1']);
+        _gaq.push(['_setDomainName', 'luisrudge.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="twelve columns">
+            <div class="fixed">
+                <nav class="top-bar bluebg">
+                    <div class="inner">
+                        <ul>
+                            <li class="name">
+                                <a href="/">
+                                    <h2 class="page-title">Luís Rudge</h2>
+                                </a>
+                            </li>
+                        </ul>
+                        <section>
+                            <ul class="right">
+                                <li><a href="/">home</a></li>
+                                <li><a href="/about">sobre</a></li>
+                                <li><a href="/projects">projetos</a></li>
+                                <li><a href="/archive">arquivo</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row content inner">
+        <div class="eight columns">
+            {{ content }}
+        </div>
+        <div class="four columns">
+            <fieldset>
+                <legend class="accent">sobre</legend>
+                <p>
+                    <img src="http://www.gravatar.com/avatar/72956a2f6ee6c25ad00d194cf7543719?s=100" alt="gravatar" style="float: left; padding: 5px 5px 0 0;" />
+                    <strong>Luís Rudge:</strong> Pai, desenvolvedor .NET na <a href="http://www.tecnologiaunica.com.br">Tecnologia Única</a>.
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend class="accent">projetos</legend>
+                <p></p>
+            </fieldset>
+            <fieldset>
+                <legend class="accent">arquivo</legend>
+                {% assign year = '2015' %}
+                    {% assign month = 'December' %}
+
+                      <ul class="posts-archive">
+                          {% for post in site.posts %}
+                          {% capture postmonth %}{{ post.date | date: "%B" }}{% endcapture %}
+                          <!-- {{ postmonth }} {{ month }} -->
+                          {% if postmonth != month %}
+                            {% assign month = postmonth %}
+                            <li><a href='/archive#{{ post.date | date: "%Y" }}{{ month }}'>{{ month }} {{ post.date | date: "%Y" }}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+            </fieldset>
+            <fieldset>
+                <legend class="accent">tags</legend>
+                <ul id="tags">
+                    {% for tag in site.tags %}
+                        <li><span class="label"><a href="/tags#{{ tag[0] }}">{{ tag[0] }}</a></span></li>
+                    {% endfor %}
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+    <footer>
+        <div class="disclaimer">
+            <div class="row inner">
+                <div class="twelve columns">
+                    <small><strong>Aviso:</strong> As opiniões expressadas nesse blog são pessoais e não representam as empresas para qual eu presto serviço.</small>
+                </div>
+            </div>
+        </div>
+        <div class="row inner">
+            <div class="four columns">
+                <fieldset>
+                    <legend class="accent">follow me</legend>
+                    <hr />
+                    <ul>
+                        <li><span class="label">Twitter</span> <a href="http://twitter.com/luisrudge">@luisrudge</a></li>
+                        <li><span class="label">Github</span> <a href="https://github.com/luisrudge">luisrudge</a></li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="four columns">
+            </div>
+            <div class="four columns">
+            </div>
+        </div>
+        <div class="row inner">
+            <div class="twelve columns">
+                <div class="center fixed-bottom">
+                    <p>
+                        <small>&copy; Copyright 2013 <a href="https://twitter.com/luisrudge">Luís Rudge</a> &raquo; Powered by <a href="https://github.com/">GitHub</a> &raquo; Design por <a href="https://github.com/alfhenrik/">alfhenrik</a>
+                            <!--&raquo; Theme based on <a href="https://github.com/Code52/metro.css">metro.css</a> by <a href="https://github.com/Code52">Code52</a>-->
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="javascripts/scale.fix.js"></script>
+</body>
+</html>

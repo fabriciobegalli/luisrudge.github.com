@@ -1,0 +1,22 @@
+---
+layout: default
+title: luisrudge.net
+---
+<h2 class="accent">archive</h2>
+<div id="archive">
+    {% for post in site.posts %}
+    {% capture postmonth %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% if postmonth != month %}
+        {% assign month = postmonth %}
+        {% if forloop.first %}
+        {% else %}
+</ul>
+        {% endif %}
+    <a name="{{ post.date | date: '%Y' }}{{ month }}"></a>
+    <h3>{{ month }}</h3>
+    <ul id="post">
+        {% endif %}
+  <li><a href="{{ post.url | remove:'.html' }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+        {% endfor %}
+    </ul>
+</div>
