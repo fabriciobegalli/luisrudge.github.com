@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Blog post Test
-excerpt: 10
+title: blog post test
+excerpt: 640
 tags:
-- test
-- wtf
+- wtf?
 ---
 
 ####Lorem ipsum dolor sit amet, consectetur adipiscing elit.

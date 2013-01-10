@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ page.title }} &#8211; luisrudge.net</title>
-
+    <link rel="shortcut icon" href="/favicon.ico" >
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script type="text/javascript">
@@ -49,20 +49,30 @@
         </div>
     </div>
     <div class="row content inner">
-        <div class="eight columns">
+        <div id="post" class="eight columns">
             {{ content }}
         </div>
         <div class="four columns">
             <fieldset>
-                <legend class="accent">sobre</legend>
+                <legend class="accent">sobre luís</legend>
                 <p>
                     <img src="http://www.gravatar.com/avatar/72956a2f6ee6c25ad00d194cf7543719?s=100" alt="gravatar" style="float: left; padding: 5px 5px 0 0;" />
-                    <strong>Luís Rudge:</strong> Pai, desenvolvedor .NET na <a href="http://www.tecnologiaunica.com.br" target="_blank">Tecnologia Única</a>.
+                    <strong>Luís Rudge</strong> Pai, desenvolvedor .NET na <a href="http://www.tecnologiaunica.com.br/" target="_blank">Tecnologia Única</a>
                 </p>
             </fieldset>
             <fieldset>
+                <legend class="accent">último tweet</legend>
+                <div id="twitter_div">
+                    <ul id="twitter_update_list">
+                        <li>&nbsp;</li>
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset>
                 <legend class="accent">projetos</legend>
-                <p></p>
+                <ul>
+                    <li>...</li>
+                </ul>
             </fieldset>
             <fieldset>
                 <legend class="accent">arquivo</legend>
@@ -94,7 +104,7 @@
         <div class="disclaimer">
             <div class="row inner">
                 <div class="twelve columns">
-                    <small><strong>Aviso:</strong> As opiniões expressadas nesse blog são pessoais e não representam as empresas para qual eu presto serviço.</small>
+                    <small><strong>Aviso:</strong> As opiniões expressadas nesse blog são totalmente pessoais.</small>
                 </div>
             </div>
         </div>
@@ -104,7 +114,7 @@
                     <legend class="accent">follow me</legend>
                     <hr />
                     <ul>
-                        <li><span class="label">Twitter</span> <a href="http://twitter.com/luisrudge">@luisrudge</a></li>
+                        <li><span class="label">Twitter</span> <a href="http://twitter.com/luisrudge">luisrudge</a></li>
                         <li><span class="label">Github</span> <a href="https://github.com/luisrudge">luisrudge</a></li>
                     </ul>
                 </fieldset>
@@ -118,7 +128,7 @@
             <div class="twelve columns">
                 <div class="center fixed-bottom">
                     <p>
-                        <small>&copy; Copyright 2013 <a href="https://twitter.com/luisrudge">Luís Rudge</a> &raquo; Powered by <a href="https://github.com/">GitHub</a> &raquo; Design por <a href="https://github.com/alfhenrik/">alfhenrik</a>
+                        <small>&copy; Copyright 2013 <a href="https://twitter.com/luisrudge">Luís Rudge</a> &raquo; Powered by <a href="https://github.com/">GitHub</a> &raquo; Theme Design by <a href="https://github.com/alfhenrik/">alfhenrik</a>
                             <!--&raquo; Theme based on <a href="https://github.com/Code52/metro.css">metro.css</a> by <a href="https://github.com/Code52">Code52</a>-->
                         </small>
                     </p>
@@ -127,6 +137,8 @@
         </div>
     </footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+    <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/luisrudge.json?callback=twitterCallback2&count=1"></script>
     <script src="javascripts/scale.fix.js"></script>
 </body>
 </html>

@@ -1,4 +1,0 @@
-luisrudge.github.com
-====================
-
-blog

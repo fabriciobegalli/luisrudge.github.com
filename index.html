@@ -6,15 +6,12 @@ title: luisrudge.net
 <h2><a href="{{ post.url | remove:'.html' }}">{{ post.title }}</a></h2>
 <div class="post-meta">
     <p>
-        {{ post.date | date_to_string }} {{ post.location }}
+        {{ post.date | date_to_string }} &raquo; 
 {% for tag in post.tags %}
         <span class="label"><a href="/tags#{{ tag }}">{{ tag }}</a></span>
         {% endfor %}
     </p>
 </div>
-{% capture excerpt %}
-      {% for paragraph in post.content %}{% if forloop.index0 <= post.excerpt %}{{ paragraph }}{% endif %}{% endfor %}
-<p><a href="{{ post.url | remove:'.html' }}">Leia mais...</a></p>
-{% endcapture %}
-  {{ excerpt }}
+{{ post.content | truncate: post.excerpt, '' }} <span class="label"><a href="{{ post.url | remove:'.html' }}">read more</a></span>
+<p></p>
 {% endfor %}
