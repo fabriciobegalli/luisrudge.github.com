@@ -363,6 +363,13 @@ footer {
 }
 
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 1024px) {
+    /* Styles */
+	#post {
+		top: 3em;
+	}
+}
 
 
 
@@ -370,9 +377,6 @@ footer {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
-	#post {
-		top: 3em;
-	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -393,9 +397,6 @@ footer {
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
-	#post {
-		top: 3em;
-	}
 }
 
 /* iPads (portrait) ----------- */
