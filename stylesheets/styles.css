@@ -190,20 +190,12 @@ header ul.right li {
         border-top: 5px solid rgb(27, 141, 226);
     }
 
-        header ul#main-nav li:hover a {
-            margin-top: 10px;
-        }
-
 header ul a {
     line-height: 1;
     color: #f2f2f2;
     display: block;
     text-align: center;
 }
-
-    header ul#main-nav a:hover {
-        background: none;
-    }
 
 strong {
     color: #222;
@@ -233,7 +225,7 @@ aside {
     }
 
 #gravatar {
-	background: #fff url('http://www.gravatar.com/avatar/704f2d28f95be7e310adcdd328e621ec?s=100') no-repeat top right;
+	background: #fff url('https://secure.gravatar.com/avatar/72956a2f6ee6c25ad00d194cf7543719?s=100') no-repeat top right;
 	float: left; 
 	width: 100px;
 	height: 100px;
