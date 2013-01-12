@@ -69,6 +69,10 @@ a {
         display: block;
     }
 
+	header {
+		padding: 0;
+		margin: 0;
+	}
 .label {
     font-weight: normal;
 }
@@ -161,23 +165,32 @@ img {
     text-align: center;
 }
 
+header {
+	width: 100%;
+	height: 50px;
+	margin: 0;
+}
+
+header .fixed {
+	margin: 0;
+}
+
 header ul {
     list-style: none;
     height: 50px;
-    float: right;
 }
 
-header li {
+header ul.right li {
     width: 90px;
     float: left;
     height: 45px;
 }
 
-    header li:hover {
+    header ul#main-nav li:hover {
         border-top: 5px solid rgb(27, 141, 226);
     }
 
-        header li:hover a {
+        header ul#main-nav li:hover a {
             margin-top: 10px;
         }
 
@@ -186,10 +199,9 @@ header ul a {
     color: #f2f2f2;
     display: block;
     text-align: center;
-    margin-top: 15px;
 }
 
-    header ul a:hover {
+    header ul#main-nav a:hover {
         background: none;
     }
 
@@ -205,7 +217,7 @@ header ul a strong {
 }
 
 .content {
-    padding: 60px 20px 60px 0;
+    padding: 0 20px 60px 0;
 }
 
 aside {
@@ -219,6 +231,14 @@ aside {
         margin: 0;
         padding: 0;
     }
+
+#gravatar {
+	background: #fff url('http://www.gravatar.com/avatar/704f2d28f95be7e310adcdd328e621ec?s=100') no-repeat top right;
+	float: left; 
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
 
 small {
     font-size: 11px;
@@ -251,6 +271,22 @@ small {
         margin: 0 10px;
     }
 
+nav#pagination
+{
+	width: 100%;
+	padding: 10px 0;
+}
+
+	nav#pagination .prev-page
+	{
+		float: left;
+	}
+	
+	nav#pagination .next-page
+	{
+		float: right;
+	}
+	
 fieldset {
     border: none;
     border-bottom: 1px solid rgba(27, 161, 226, 0.25);
@@ -276,7 +312,7 @@ hr {
 
 .disclaimer {
     width: 100%;
-    height: 35px;
+    min-height: 35px;
     background: rgba(27, 161, 226, 0.25);
     padding: 10px 0;
     text-align: center;
@@ -326,9 +362,13 @@ footer {
     aside {
         padding: 20px 0 60px;
     }
+	
+	#post {
+		padding-bottom: 50px;
+	}
 }
 
-@media print, screen and (max-width: 768px) {
+@media print, screen and (max-width: 768px){
     body {
         word-wrap: break-word;
     }
@@ -344,6 +384,16 @@ footer {
     pre, code {
         word-wrap: normal;
     }
+	
+	#gravatar {
+		background: #fff url('http://www.gravatar.com/avatar/704f2d28f95be7e310adcdd328e621ec?s=50') no-repeat top right;
+		width: 50px;
+		height: 50px;
+	}
+	#post {
+		/* top: 3em; */
+		
+	}
 }
 
 @media print, screen and (max-width: 480px) {
@@ -353,6 +403,9 @@ footer {
     header ul {
         display: none;
     }
+	.page-title {
+		font-size: 36px;
+	}
 }
 
 @media print {
@@ -366,17 +419,42 @@ footer {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-device-width : 1024px) {
     /* Styles */
-	#post {
-		top: 3em;
+    #post {
+		/* top: 3em; */
+	}
+
+    section, aside {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    section {
+        width: 100%;
+        padding: 60px 0 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(27, 161, 226, 0.25);
+    }
+
+    aside {
+        padding: 20px 0 60px;
+    }
+	
+	.top-bar {
+		margin: 0 auto;
+		width: 100%
 	}
 }
-
 
 
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+	.page-title {
+		font-size: 32px;
+	}
+	
 }
 
 /* Smartphones (landscape) ----------- */
