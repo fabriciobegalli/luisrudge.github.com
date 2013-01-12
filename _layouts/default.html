@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ page.title }} &#8211; luisrudge.net</title>
+    <title>{{ page.title }} &#8211; henri.kandersson.com</title>
     <link rel="shortcut icon" href="/favicon.ico" >
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-37408911-1']);
-        _gaq.push(['_setDomainName', 'luisrudge.net']);
+        _gaq.push(['_setAccount', 'UA-37423173-1']);
+        _gaq.push(['_setDomainName', 'kandersson.com']);
         _gaq.push(['_trackPageview']);
 
         (function () {
@@ -23,6 +23,7 @@
     </script>
 </head>
 <body>
+<header class="bluebg">
     <div class="row">
         <div class="twelve columns">
             <div class="fixed">
@@ -31,16 +32,16 @@
                         <ul>
                             <li class="name">
                                 <a href="/">
-                                    <h2 class="page-title">Luís Rudge</h2>
+                                    <h2 class="page-title">Henrik Andersson</h2>
                                 </a>
                             </li>
                         </ul>
                         <section>
-                            <ul class="right">
+                            <ul id="main-nav" class="right">
                                 <li><a href="/">home</a></li>
-                                <li><a href="/about">sobre</a></li>
-                                <li><a href="/projects">projetos</a></li>
-                                <li><a href="/archive">arquivo</a></li>
+                                <li><a href="/about">about</a></li>
+                                <li><a href="/projects">projects</a></li>
+                                <li><a href="/archive">archive</a></li>
                             </ul>
                         </section>
                     </div>
@@ -48,20 +49,21 @@
             </div>
         </div>
     </div>
+	</header>
     <div class="row content inner">
         <div id="post" class="eight columns">
             {{ content }}
         </div>
         <div class="four columns">
             <fieldset>
-                <legend class="accent">sobre luís</legend>
+                <legend class="accent">about henrik</legend>
                 <p>
-                    <img src="http://www.gravatar.com/avatar/72956a2f6ee6c25ad00d194cf7543719?s=100" alt="gravatar" style="float: left; padding: 5px 5px 0 0;" />
-                    <strong>Luís Rudge</strong> Pai, desenvolvedor .NET na <a href="http://www.tecnologiaunica.com.br/" target="_blank">Tecnologia Única</a>
+                    <div id="gravatar">&nbsp;</div>
+                    <strong>Henrik Andersson</strong> is a former chef now software developer specialising in .NET Framework stack, a father and husband with a beautiful wife and three wonderful children, a viking and originally from Sweden...no, not Switzerland.
                 </p>
             </fieldset>
             <fieldset>
-                <legend class="accent">último tweet</legend>
+                <legend class="accent">latest tweet</legend>
                 <div id="twitter_div">
                     <ul id="twitter_update_list">
                         <li>&nbsp;</li>
@@ -69,13 +71,13 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend class="accent">projetos</legend>
+                <legend class="accent">projects</legend>
                 <ul>
-                    <li>...</li>
+                    <li><a href="https://github.com/davidfowl/MessengR" title="One on one messenger app using SignalR">MessengR</a></li>
                 </ul>
             </fieldset>
             <fieldset>
-                <legend class="accent">arquivo</legend>
+                <legend class="accent">archive</legend>
                 {% assign year = '2015' %}
                     {% assign month = 'December' %}
 
@@ -104,7 +106,7 @@
         <div class="disclaimer">
             <div class="row inner">
                 <div class="twelve columns">
-                    <small><strong>Aviso:</strong> As opiniões expressadas nesse blog são totalmente pessoais.</small>
+                    <small><strong>Disclaimer:</strong> The opinions expressed on this blog are my own personal opinions and do not represent any of my previous, current or future employer’s view in any way.</small>
                 </div>
             </div>
         </div>
@@ -114,8 +116,8 @@
                     <legend class="accent">follow me</legend>
                     <hr />
                     <ul>
-                        <li><span class="label">Twitter</span> <a href="http://twitter.com/luisrudge">luisrudge</a></li>
-                        <li><span class="label">Github</span> <a href="https://github.com/luisrudge">luisrudge</a></li>
+                        <li><span class="label">Twitter</span> <a href="http://twitter.com/ahandersson">ahandersson</a></li>
+                        <li><span class="label">Github</span> <a href="https://github.com/alfhenrik">alfhenrik</a></li>
                     </ul>
                 </fieldset>
             </div>
@@ -128,7 +130,7 @@
             <div class="twelve columns">
                 <div class="center fixed-bottom">
                     <p>
-                        <small>&copy; Copyright 2013 <a href="https://twitter.com/luisrudge">Luís Rudge</a> &raquo; Powered by <a href="https://github.com/">GitHub</a> &raquo; Theme Design by <a href="https://github.com/alfhenrik/">alfhenrik</a>
+                        <small>&copy; Copyright 2013 <a href="https://twitter.com/ahandersson">Henrik Andersson</a> &raquo; Powered by <a href="https://github.com/">GitHub</a> &raquo; Theme Design by <a href="https://github.com/alfhenrik/">alfhenrik</a>
                             <!--&raquo; Theme based on <a href="https://github.com/Code52/metro.css">metro.css</a> by <a href="https://github.com/Code52">Code52</a>-->
                         </small>
                     </p>
@@ -138,7 +140,7 @@
     </footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-    <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/luisrudge.json?callback=twitterCallback2&count=1"></script>
+    <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/ahandersson.json?callback=twitterCallback2&count=1"></script>
     <script src="javascripts/scale.fix.js"></script>
 </body>
 </html>
