@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Assuntos abordados
+title: Assuntos a serem abordados
 tags:
 - futuro
 - webstack
